@@ -18,3 +18,22 @@ tankvol(60,120,3500) should return 1750
 tankvol(80,120,3500) should return 2478 (calculation gives about: 2478.73007973)
 Tank vertical section:
     http://i.imgur.com/wmt0U43.png*/
+function tankvol(h, d, vt) {
+    const r = d/2  // вычисляем радиус
+    const l = vt/(Math.PI * r ** 2) // вычисляем длинну бака
+    const Q = Math.acos(1-(h/r))*2 // вычисляем угол сектора
+
+    let result = l*((r**2)/2)*(Q-Math.sin(Q))  // вычисляем объем топлива = Sсегмента * длинну бака
+
+    return Math.trunc(result)
+}
+______________________________
+function tankvol(h, d, vt) {
+    let r = d / 2;
+    let w = vt / (r * r * Math.PI);
+    let a = (r * r) * Math.acos(1 - h / r)
+        - (r - h) * Math.sqrt(2 * r * h - h * h);
+
+    return w * a | 0;
+}
+______________________________
