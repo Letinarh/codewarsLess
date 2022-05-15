@@ -34,6 +34,7 @@ function XO(str) {
     return res
 }
 
+/*
 ____________________________
 function XO(str) {
     let x = str.match(/x/gi);
@@ -49,4 +50,4 @@ const XO = str => {
     str = str.toLowerCase().split('');
     return str.filter(x => x === 'x').length === str.filter(x => x === 'o').length;
 }
-____________________________
+____________________________*/

@@ -39,6 +39,7 @@ var nbrOfLaps = function (x, y) {
 }
 
 
+/*
 ______________________
 var nbrOfLaps = function(x, y) {
     var lcm = x;
@@ -61,4 +62,4 @@ var nbrOfLaps = function (x, y) {
     for(let i=x;;i+=x)
         if (i%y==0) return [i/x,i/y];
 }
-______________________
+______________________*/
