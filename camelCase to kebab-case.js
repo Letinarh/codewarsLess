@@ -6,6 +6,7 @@ const kebabize = (string) => {
 
     return str2.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
 };
+/*
 ____________________
 перевести стиль camelCase в kebab-case
 ____________________
@@ -18,4 +19,4 @@ ____________________
 function kebabize(str) {
     return str.replace(/([A-Z])/g, "-$1").replace(/[0-9]/g, '').toLowerCase().replace(/^-/, '');
 }
-____________________
+____________________*/
